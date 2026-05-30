@@ -38,4 +38,6 @@ npm start
 npm run build
 ```
 
-Voor GitHub Pages kan de inhoud van `build/` als statische site gepubliceerd worden. Bij deployment onder een subpad, bijvoorbeeld `username.github.io/falke-hair`, moet de assetbasis in de gekozen Pages-configuratie overeenkomen met dat pad.
+## GitHub Pages
+
+Deze repo gebruikt GitHub Actions om de React-build te publiceren. GitHub Pages moet in de repository-instellingen op `GitHub Actions` staan, niet op `Deploy from a branch`. Bij elke push naar `main` wordt `npm run build` uitgevoerd en wordt de inhoud van `build/` gepubliceerd.
