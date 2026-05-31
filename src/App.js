@@ -3,6 +3,7 @@ import './App.css';
 import salonInterior from './assets/salon-interior.png';
 import hairStyling from './assets/hair-styling.png';
 import hairPortrait from './assets/hair-portrait.png';
+import logo from './assets/logo.png';
 import {
   aboutContent,
   actions,
@@ -44,13 +45,14 @@ function App() {
   return (
     <div className="site-shell">
       <header className="topbar">
-        <a className="brand" href="#home" aria-label="HAIR by Falke home">
-          <span className="brand-mark">HF</span>
-          <span>
-            <strong>HAIR</strong>
-            <small>by Falke</small>
-          </span>
-        </a>
+        <img className="brand-logo" src={logo} alt="HAIR by Falke logo" />
+        {/*<a className="brand" href="#home" aria-label="HAIR by Falke home">*/}
+        {/*  <span className="brand-mark">HF</span>*/}
+        {/*  <span>*/}
+        {/*    <strong>HAIR</strong>*/}
+        {/*    <small>by Falke</small>*/}
+        {/*  </span>*/}
+        {/*</a>*/}
 
         <nav className="nav" aria-label="Hoofdnavigatie">
           {navItems.map((item) => (

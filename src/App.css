@@ -60,6 +60,13 @@ img {
   text-decoration: none;
 }
 
+.brand-logo {
+  display: block;
+  height: 72px;
+  object-fit: contain;
+  width: auto;
+}
+
 .brand-mark {
   align-items: center;
   aspect-ratio: 1;
@@ -501,6 +508,10 @@ tbody tr:last-child td {
 
   .brand-mark {
     width: 38px;
+  }
+
+  .brand-logo {
+    height: 56px;
   }
 
   .nav-cta {
