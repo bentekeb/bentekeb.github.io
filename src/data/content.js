@@ -55,11 +55,11 @@ export const aboutContent = {
     'HAIR by Falke is ontstaan vanuit een passie voor haar, schoonheid en het fijne gevoel dat je krijgt wanneer je buitenstapt met een look die klopt.',
   mission: {
     title: 'Missie',
-    text: 'Falke wil een plek creëren waar klanten zich welkom voelen en met vertrouwen advies krijgen over hun haar. Elke behandeling vertrekt vanuit persoonlijke aandacht, verzorging en een resultaat dat natuurlijk aanvoelt.',
+    text: 'Ik werk enkel op afspraak zodat ik elke klant de nodige tijd en aandacht kan geven. Ik luister actief, geef professioneel advies en zorg voor een verzorgde service in een nette en aangename omgeving. Door regelmatig opleiding te volgen, feedback serieus te nemen en problemen meteen op te lossen, blijf ik mijn kwaliteit verbeteren.',
   },
   vision: {
     title: 'Visie',
-    text: 'HAIR by Falke staat voor een modern salon met warmte en elegantie: professioneel, rustig en stijlvol, met oog voor trends en voor wat echt bij de klant past.',
+    text: 'Ik wil een rustig en warm kapsalon creëren waar elke klant zich welkom en op zijn gemak voelt. Met eerlijk advies, persoonlijke aandacht en oog voor detail zorg ik voor een mooi resultaat dat past bij ieders stijl. Ik wil dat klanten buitenwandelen met rust, zelfvertrouwen en een goed gevoel.',
   },
 };
 
