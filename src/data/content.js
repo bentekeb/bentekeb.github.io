@@ -9,10 +9,9 @@ export const navItems = [
 export const heroContent = {
   eyebrow: 'HAIR by Falke',
   title: 'Stralend haar in een warme, elegante sfeer.',
-  text: 'Bij HAIR by Falke draait alles om verzorgd haar, persoonlijke aandacht en een look die bij jou past. Een modern salonconcept met een huiselijke toets.',
+  text: 'Bij HAIR by Falke draait alles om verzorgd haar, persoonlijke aandacht en een look die bij jou past. Een modern salon met een huiselijke sfeer.',
   primaryCta: 'Boek afspraak',
-  secondaryCta: 'Ontdek de diensten',
-  note: 'Voorbeeldknop voor de presentatie, zonder echte boekingsfunctie.',
+  secondaryCta: 'Ontdek de diensten'
 };
 
 export const services = [
@@ -68,16 +67,16 @@ export const actions = [
   {
     name: 'Fresh Wednesdays',
     description:
-      'Een vaste midweekse opfrissing voor wie graag met fris, verzorgd haar de tweede helft van de week ingaat.',
+      'Op woensdag verwennen we studenten met stijlen, krullen of gratis een hoofdwassing.',
   },
   {
     name: 'Klantenkaart',
     description:
-      'Een eenvoudige manier om trouwe klanten extra in de watten te leggen met kleine voordelen en attenties.',
+      'Trouwe klanten sparen bij elk bezoek een stempel. Bij 10 stempels krijg je gratis krullen, stijlen of hoofdwassing.',
   },
   {
-    name: 'Eindejaars cadeautjes',
+    name: 'Hoofdmassage',
     description:
-      'Tijdens de feestperiode voorziet HAIR by Falke een warm extraatje als bedanking voor het vertrouwen.',
+      'Ontspan volledig tijdens je bezoek met een gratis hoofdmassage bij elke behandeling.',
   },
 ];

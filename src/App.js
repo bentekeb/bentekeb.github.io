@@ -109,7 +109,6 @@ function App() {
           <div className="section-heading reveal">
             <p className="eyebrow">Prijzen</p>
             <h2>Duidelijke richtprijzen per haarlengte.</h2>
-            <p>Alle bedragen zijn placeholders voor de MVP-presentatie.</p>
           </div>
           <div className="pricing-card reveal">
             <div className="pricing-scroll" aria-label="Prijzentabel">
@@ -163,7 +162,7 @@ function App() {
         <section className="section actions-section" id="acties">
           <div className="section-heading reveal">
             <p className="eyebrow">Acties</p>
-            <h2>Warme extra's voor terugkerende klanten.</h2>
+            <h2>Warme extra's voor klanten.</h2>
           </div>
           <div className="action-grid">
             {actions.map((action) => (
@@ -175,9 +174,9 @@ function App() {
           </div>
           <div className="booking-strip reveal">
             <div>
-              <p className="eyebrow">Voorbeeld CTA</p>
+              <p className="eyebrow">Laat je verwennen</p>
               <h2>Boek afspraak</h2>
-              <p>Deze knop toont de gewenste flow voor de presentatie en opent nog geen echte boeking.</p>
+              <p>Boek je afspraak en geef je haar de verzorging die het verdient.</p>
             </div>
             <button className="primary-button" type="button">
               Boek afspraak

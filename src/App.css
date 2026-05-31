@@ -118,8 +118,8 @@ img {
 
 .nav-cta,
 .primary-button {
-  background: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--gold);
+  border-color: var(--gold);
   color: var(--white);
   cursor: pointer;
   min-height: 46px;
@@ -129,8 +129,8 @@ img {
 
 .nav-cta:hover,
 .primary-button:hover {
-  background: var(--gold);
-  border-color: var(--gold);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   transform: translateY(-2px);
 }
 
@@ -342,7 +342,7 @@ td {
 }
 
 thead th {
-  background: var(--ink);
+  background: var(--gold);
   color: var(--white);
   font-size: 0.86rem;
   font-weight: 700;
