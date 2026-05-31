@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import salonInterior from './assets/salon-interior.png';
 import hairStyling from './assets/hair-styling.png';
@@ -14,6 +14,8 @@ import {
 import { hairLengths, pricingRows } from './data/pricing';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     if (!('IntersectionObserver' in window)) {
       document.querySelectorAll('.reveal').forEach((item) => item.classList.add('is-visible'));
@@ -40,6 +42,7 @@ function App() {
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   return (
@@ -54,12 +57,38 @@ function App() {
         {/*  </span>*/}
         {/*</a>*/}
 
-        <nav className="nav" aria-label="Hoofdnavigatie">
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={isMenuOpen ? 'Sluit menu' : 'Open menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div
+          className={`nav-backdrop${isMenuOpen ? ' is-open' : ''}`}
+          aria-hidden="true"
+          onClick={() => setIsMenuOpen(false)}
+        />
+
+        <nav
+          className={`nav${isMenuOpen ? ' is-open' : ''}`}
+          id="mobile-navigation"
+          aria-label="Hoofdnavigatie"
+        >
           {navItems.map((item) => (
-            <a href={`#${item.id}`} key={item.id}>
+            <a href={`#${item.id}`} key={item.id} onClick={() => setIsMenuOpen(false)}>
               {item.label}
             </a>
           ))}
+          <button className="drawer-cta" type="button" onClick={() => scrollToSection('acties')}>
+            Boek afspraak
+          </button>
         </nav>
 
         <button className="nav-cta" type="button" onClick={() => scrollToSection('acties')}>

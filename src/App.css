@@ -97,6 +97,35 @@ img {
   justify-content: center;
 }
 
+.menu-toggle,
+.drawer-cta,
+.nav-backdrop {
+  display: none;
+}
+
+.menu-toggle {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  width: 44px;
+}
+
+.menu-toggle span {
+  background: var(--ink);
+  display: block;
+  height: 2px;
+  transition: transform 180ms ease, opacity 180ms ease;
+  width: 20px;
+}
+
+.menu-toggle span + span {
+  margin-top: 5px;
+}
+
 .nav a,
 .text-link {
   color: var(--coffee);
@@ -473,11 +502,86 @@ tbody tr:last-child td {
     grid-template-columns: 1fr auto;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 35;
+  }
+
+  .menu-toggle[aria-expanded='true'] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded='true'] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-backdrop {
+    background: rgba(53, 37, 31, 0.34);
+    display: block;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 180ms ease;
+    z-index: 24;
+  }
+
+  .nav-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .nav {
-    grid-column: 1 / -1;
+    align-items: flex-start;
+    background: var(--white);
+    box-shadow: -22px 0 56px rgba(53, 37, 31, 0.18);
+    flex-direction: column;
+    gap: 18px;
+    height: 100vh;
     justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 4px;
+    max-width: 340px;
+    padding: 112px 28px 32px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(104%);
+    transition: transform 220ms ease;
+    width: min(82vw, 340px);
+    z-index: 30;
+  }
+
+  .nav.is-open {
+    transform: translateX(0);
+  }
+
+  .nav a {
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 1.1rem;
+    padding: 0 0 14px;
+    width: 100%;
+  }
+
+  .drawer-cta {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--white);
+    cursor: pointer;
+    display: block;
+    margin-top: 6px;
+    min-height: 46px;
+    padding: 0 22px;
+    width: 100%;
+  }
+
+  .nav-cta {
+    display: none;
   }
 
   .services-layout,
